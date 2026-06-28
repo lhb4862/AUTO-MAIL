@@ -87,6 +87,8 @@ def run(*, force: bool = False, skip_schedule: bool = False) -> int:
         print("[LIVE] 실제 메일 전송 시작 (SEND_EMAIL=True)")
 
     results: list[str] = []
+    failures: list[str] = []
+
     crewworks_cfg = config.get("crewworks", {})
     if crewworks_cfg.get("enabled", False):
         cw_config = None
@@ -106,12 +108,12 @@ def run(*, force: bool = False, skip_schedule: bool = False) -> int:
                 config=cw_config,
             )
             results.append("crewworks:ok")
+            print("[CrewWorks 내부 메일] 성공")
         except Exception as exc:
             print(f"[CrewWorks 내부 메일] 오류: {exc}")
             results.append(f"crewworks:error:{exc}")
-            if not dry_run:
-                write_log(f"ERROR crewworks: {exc}")
-                return 1
+            failures.append(f"CrewWorks: {exc}")
+            write_log(f"ERROR crewworks: {exc}")
 
     external_cfg = config.get("external", {})
     if external_cfg.get("enabled", False):
@@ -134,18 +136,31 @@ def run(*, force: bool = False, skip_schedule: bool = False) -> int:
                 smtp_config=smtp_config,
             )
             results.append("external:ok")
+            print("[외부 이메일] 성공")
         except Exception as exc:
             print(f"[외부 이메일] 오류: {exc}")
             results.append(f"external:error:{exc}")
-            if not dry_run:
-                write_log(f"ERROR external: {exc}")
-                return 1
+            failures.append(f"외부 메일: {exc}")
+            write_log(f"ERROR external: {exc}")
 
     if dry_run:
         print("=" * 40)
 
     mode = "DRY-RUN" if dry_run else "LIVE"
     write_log(f"{mode} subject='{subject}' results={','.join(results)}")
+
+    successes = [r for r in results if r.endswith(":ok")]
+    if failures and successes:
+        print(f"일부 완료 ({mode}): 성공 {len(successes)}건, 실패 {len(failures)}건")
+        for item in failures:
+            print(f"  - 실패: {item}")
+        return 0
+    if failures:
+        print(f"전체 실패 ({mode})")
+        for item in failures:
+            print(f"  - {item}")
+        return 1
+
     print(f"완료 ({mode})")
     return 0
 
