@@ -1,0 +1,18 @@
+{
+  "schedule": {
+    "times": ["09:00", "18:00"],
+    "days": ["mon", "tue", "wed", "thu", "fri"]
+  },
+  "crewworks": {
+    "enabled": false,
+    "recipients": []
+  },
+  "external": {
+    "enabled": true,
+    "recipients": ["recipient@example.com"]
+  },
+  "mail": {
+    "subject": "[{date}] 정기 안내",
+    "body": "안녕하세요.\n\n{date} {time} 정기 메일입니다.\n\n감사합니다."
+  }
+}

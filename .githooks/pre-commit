@@ -1,0 +1,57 @@
+#!/bin/sh
+# Block committing secrets and local-only files.
+# Install: git config core.hooksPath .githooks
+
+blocked_paths="
+.env
+.env.local
+.env.production
+config.json
+credentials.json
+secrets.json
+mail_log.xlsx
+"
+
+blocked_prefixes="
+logs/
+__pycache__/
+.venv/
+venv/
+"
+
+for file in $(git diff --cached --name-only); do
+  for blocked in $blocked_paths; do
+    case "$file" in
+      "$blocked"|.env.*)
+        echo ""
+        echo "ERROR: '$file' must not be committed."
+        echo "       It is listed in .gitignore (secrets / local config)."
+        echo ""
+        exit 1
+        ;;
+    esac
+  done
+
+  for prefix in $blocked_prefixes; do
+    case "$file" in
+      ${prefix}*)
+        echo ""
+        echo "ERROR: '$file' must not be committed."
+        echo "       Files under '$prefix' are local-only."
+        echo ""
+        exit 1
+        ;;
+    esac
+  done
+
+  case "$file" in
+    *.pem|*.key)
+      echo ""
+      echo "ERROR: '$file' looks like a private key/certificate."
+      echo ""
+      exit 1
+      ;;
+  esac
+done
+
+exit 0

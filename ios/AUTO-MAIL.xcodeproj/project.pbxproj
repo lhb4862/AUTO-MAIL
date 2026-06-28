@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000010000000000000001 /* AUTO_MAILApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000001 /* AUTO_MAILApp.swift */; };
+		A10000010000000000000002 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000002 /* SettingsView.swift */; };
+		A10000010000000000000003 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000003 /* SettingsViewModel.swift */; };
+		A10000010000000000000004 /* MailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000004 /* MailConfig.swift */; };
+		A10000010000000000000005 /* ConfigStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000005 /* ConfigStore.swift */; };
+		A10000010000000000000006 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000006 /* EmailSender.swift */; };
+		A10000010000000000000007 /* CrewWorksSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000007 /* CrewWorksSender.swift */; };
+		A10000010000000000000008 /* MailRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000008 /* MailRunner.swift */; };
+		A10000010000000000000009 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000009 /* NotificationScheduler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000020000000000000001 /* AUTO_MAILApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUTO_MAILApp.swift; sourceTree = "<group>"; };
+		A10000020000000000000002 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A10000020000000000000003 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A10000020000000000000004 /* MailConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfig.swift; sourceTree = "<group>"; };
+		A10000020000000000000005 /* ConfigStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigStore.swift; sourceTree = "<group>"; };
+		A10000020000000000000006 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
+		A10000020000000000000007 /* CrewWorksSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewWorksSender.swift; sourceTree = "<group>"; };
+		A10000020000000000000008 /* MailRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailRunner.swift; sourceTree = "<group>"; };
+		A10000020000000000000009 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		A10000030000000000000001 /* AUTO-MAIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AUTO-MAIL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000020000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000040000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000050000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A10000050000000000000002 /* AUTO-MAIL */,
+				A10000050000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000050000000000000002 /* AUTO-MAIL */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000001 /* AUTO_MAILApp.swift */,
+				A10000020000000000000010 /* Info.plist */,
+				A10000050000000000000004 /* Models */,
+				A10000050000000000000005 /* Services */,
+				A10000050000000000000006 /* ViewModels */,
+				A10000050000000000000007 /* Views */,
+			);
+			path = "AUTO-MAIL";
+			sourceTree = "<group>";
+		};
+		A10000050000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000030000000000000001 /* AUTO-MAIL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000004 /* MailConfig.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000005 /* ConfigStore.swift */,
+				A10000020000000000000006 /* EmailSender.swift */,
+				A10000020000000000000007 /* CrewWorksSender.swift */,
+				A10000020000000000000008 /* MailRunner.swift */,
+				A10000020000000000000009 /* NotificationScheduler.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000006 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000003 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000002 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000060000000000000001 /* AUTO-MAIL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000090000000000000003 /* Build configuration list for PBXNativeTarget "AUTO-MAIL" */;
+			buildPhases = (
+				A10000070000000000000001 /* Sources */,
+				A10000040000000000000001 /* Frameworks */,
+				A10000080000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AUTO-MAIL";
+			productName = "AUTO-MAIL";
+			productReference = A10000030000000000000001 /* AUTO-MAIL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A100000A0000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A10000090000000000000001 /* Build configuration list for PBXProject "AUTO-MAIL" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ko;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ko,
+				Base,
+			);
+			mainGroup = A10000050000000000000001;
+			productRefGroup = A10000050000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000060000000000000001 /* AUTO-MAIL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000080000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000070000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* AUTO_MAILApp.swift in Sources */,
+				A10000010000000000000002 /* SettingsView.swift in Sources */,
+				A10000010000000000000003 /* SettingsViewModel.swift in Sources */,
+				A10000010000000000000004 /* MailConfig.swift in Sources */,
+				A10000010000000000000005 /* ConfigStore.swift in Sources */,
+				A10000010000000000000006 /* EmailSender.swift in Sources */,
+				A10000010000000000000007 /* CrewWorksSender.swift in Sources */,
+				A10000010000000000000008 /* MailRunner.swift in Sources */,
+				A10000010000000000000009 /* NotificationScheduler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A100000B0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A100000B0000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A100000B0000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AUTO-MAIL/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.automail.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A100000B0000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AUTO-MAIL/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.automail.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000090000000000000001 /* Build configuration list for PBXProject "AUTO-MAIL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A100000B0000000000000001 /* Debug */,
+				A100000B0000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000090000000000000003 /* Build configuration list for PBXNativeTarget "AUTO-MAIL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A100000B0000000000000003 /* Debug */,
+				A100000B0000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A100000A0000000000000001 /* Project object */;
+}

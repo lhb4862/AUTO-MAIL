@@ -1,0 +1,67 @@
+# ============================================
+# Secrets & credentials (NEVER upload)
+# ============================================
+.env
+.env.local
+.env.production
+.env.*.local
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# ============================================
+# Local user settings (recipients, schedule)
+# ============================================
+config.json
+
+# ============================================
+# Logs & runtime data
+# ============================================
+logs/
+*.log
+mail_log.txt
+mail_log.xlsx
+mail_log_pending.jsonl
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.Python
+*.egg-info/
+dist/
+build/
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# IDE / Editor
+# ============================================
+.vscode/
+.idea/
+*.swp
+.cursor/
+
+# ============================================
+# iOS / Xcode (build artifacts only)
+# ============================================
+ios/**/DerivedData/
+ios/**/*.xcuserstate
+ios/**/xcuserdata/
+*.ipa
+
+# ============================================
+# Safe to commit (NOT ignored):
+#   .env.example
+#   config.json.example
+# ============================================
