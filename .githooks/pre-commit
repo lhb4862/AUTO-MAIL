@@ -9,7 +9,7 @@ blocked_paths="
 config.json
 credentials.json
 secrets.json
-mail_log.txt
+mail_log.xlsx
 "
 
 blocked_prefixes="

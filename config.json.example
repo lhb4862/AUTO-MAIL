@@ -1,7 +1,7 @@
 {
   "schedule": {
     "times": ["09:00", "18:00"],
-    "weekdays_only": false
+    "days": ["mon", "tue", "wed", "thu", "fri"]
   },
   "crewworks": {
     "enabled": false,
